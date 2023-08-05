@@ -1,0 +1,73 @@
+.md_dashboard_cont{
+  width: 100%;
+  font-family: sofiapro;
+
+  .md_db_title{
+    margin: 40px 0 20px;
+    font-family: sofiapro;
+    font-size: 20px;
+    font-weight: 600;
+    color: #505887;
+  }
+  .md_db_folder_cont,.md_db_quick_cont{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .md_db_quick_cont{
+    overflow: auto;
+    margin-top: 20px;
+
+  }
+
+  .md_db_files_cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .md_db_recent_cont{
+      width: 58%;
+    }
+    .md_db_manager_cont{
+      width: 38%;
+    }
+
+  }
+
+  .md_db_manager_cont{
+    .files_cont{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .each_file{
+        background: #EBEDFB;
+        min-width: 120px;
+        margin: 10px 0;
+        aspect-ratio: 2;
+        width: 48%;
+        padding: 10px;
+        border-radius: 9px;
+        img{
+          width: 30px;
+          margin: 5px 0;
+          aspect-ratio: 1;
+        }
+        .name{
+          color: #505887;
+          font-size: 15px;
+          margin: 5px 0;
+
+          font-weight: 600;
+        }
+        .created{
+          font-size: 13px;
+          margin: 5px 0;
+
+          color: #718EBF;
+        }
+      }
+
+    }
+  }
+}
