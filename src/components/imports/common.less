@@ -51,18 +51,20 @@
 .md_file_list_cont{
   width: 100%;
   .md_fl_title{
-    margin: 40px 0 20px;
+    margin: 0px 0 20px;
     font-family: sofiapro;
     font-size: 20px;
     font-weight: 600;
     color: #505887;
   }
   .files_cont_horizontal{
-    justify-content: space-between;
+    //justify-content: space-between;
     display: flex;
+    flex-wrap: wrap;
   }
   .files_cont{
     width: 100%;
+    font-family: sofiapro;
     .each_file_item:first-child{
       margin-top: 25px;
     }
@@ -99,15 +101,29 @@
         color: #718EBF;
       }
     }
+    .each_quick_folder{
 
+      .folder_img{
+        width: 50%;
+        margin: auto;
+        position: relative;
+      }
+    }
     .each_quick_item{
-      width: 24%;
+      width: 22%;
+      cursor: pointer;
       aspect-ratio: 1.2;
       border-radius: 15px;
+      margin: 10px;
       display: flex;
       position: relative;
       justify-content: flex-end;
+      //border: 0.2px solid var(--theme-color);
+      box-shadow: -1px 3px 6px rgba(0, 0, 0, 0.25);
       flex-direction: column;
+      &:hover{
+        box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.45);
+      }
       & > img{
         width: 100%;
         position: absolute;
@@ -123,7 +139,7 @@
         justify-content: center;
         align-items: center;
         z-index: 3;
-        background: #F5F5F5;
+        background: #EBEDFB;
         padding: 5px;
         //position: relative;
         border-radius: 0 0 13px 13px;
@@ -143,5 +159,37 @@
       }
     }
 
+  }
+}
+.md_each_folder_item{
+  background: #EBEDFB;
+  min-width: 120px;
+  margin: 10px 0;
+  aspect-ratio: 2;
+  width: 24%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: -1px 3px 6px rgba(0, 0, 0, 0.25);
+
+  //justify-content: space-between;
+  border-radius: 9px;
+  img{
+    width: 40%;
+    margin: 10px auto;
+    aspect-ratio: 1;
+  }
+  .name{
+    color: #505887;
+    font-size: 16px;
+    margin-top: 10%;
+    font-weight: 600;
+  }
+  .created{
+    font-size: 14px;
+    margin-top: 5%;
+
+    color: #718EBF;
   }
 }

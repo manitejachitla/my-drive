@@ -9,28 +9,34 @@ import File from '../../../img/sidebar/File.svg'
 import signedFile from '../../../img/sidebar/Signed-File.svg'
 import camera from '../../../img/sidebar/Camera.svg'
 import videoCamera from '../../../img/sidebar/Video-camera.svg'
+import {useLocation, useNavigate} from "react-router-dom";
 const SideBar = () => {
+    const navigate=useNavigate()
+    const location=useLocation()
     const sidebarItems=[
         {name:'Dashboard',icon:dashoard,path:'/'},
-        {name:'All Files',icon:allfiles,path:'/'},
-        {name:'Shared',icon:shared,path:'/'},
-        {name:'Favorites',icon:fav,path:'/'},
-        {name:'Recent',icon:recent,path:'/'},
-        {name:'Request',icon:scale,path:'/'},
+        {name:'All Files',icon:allfiles,path:'/all_files'},
+        {name:'Shared',icon:shared,path:'/shared'},
+        {name:'Favorites',icon:fav,path:'/starred'},
+        {name:'Recent',icon:recent,path:'/recent'},
+        {name:'Request',icon:scale,path:'/requested'},
     ]
     const sidebarItems2=[
-        {name:'Pictures',icon:camera,path:'/'},
-        {name:'Videos',icon:videoCamera,path:'/'},
-        {name:'Documents',icon:File,path:'/'},
-        {name:'Signed',icon:signedFile,path:'/'},
+        {name:'Pictures',icon:camera,path:'/pictures'},
+        {name:'Videos',icon:videoCamera,path:'/videos'},
+        {name:'Documents',icon:File,path:'/documents'},
+        {name:'Signed',icon:signedFile,path:'/signed'},
     ]
+    const onSideBarClick = (item) => {
+      navigate(item.path)
+    }
     return (
         <div className="md_sidebar_cont">
             <div className="md_sb_icon_cont">
                 <div className="nav_cont">
                     {
                         sidebarItems.map(item=>(
-                            <div className={`md_sb_each_icon ${item.name==='Dashboard'?"md_sb_active_icon":""}`}>
+                            <div className={`md_sb_each_icon ${item.name==='Dashboard'?"md_sb_active_icon":""}`} onClick={()=>onSideBarClick(item)}>
                                 <div className="icon_back">
                                     <img src={item.icon} alt=""/>
                                 </div>
@@ -42,7 +48,7 @@ const SideBar = () => {
                 <div className="file_type_cont">
                     {
                         sidebarItems2.map(item=>(
-                            <div className={`md_sb_each_icon ${item.name==='Dashboard'?"md_sb_active_icon":""}`}>
+                            <div className={`md_sb_each_icon ${item.name==='Dashboard'?"md_sb_active_icon":""}`} onClick={()=>onSideBarClick(item)}>
                                 <div className="icon_back">
                                     <img src={item.icon} alt=""/>
                                 </div>

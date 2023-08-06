@@ -1,4 +1,22 @@
 .md_main_content_cont{
   width: calc(100% - 250px);
   padding: 20px;
+  height: 100%;
+  overflow: auto;
+}
+// handle scroll bar
+.no_scroll_bar_cont::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+}
+
+.no_scroll_bar_cont::-webkit-scrollbar-track {
+  //box-shadow: inset 0 0 1px grey;
+  border-radius: 0px;
+}
+
+.no_scroll_bar_cont::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.2);
+  display: none;
+  border-radius: 0px;
 }

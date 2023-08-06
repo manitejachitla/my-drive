@@ -17,7 +17,7 @@ const Dashboard = () => {
     useEffect(() => {
         let getData=async ()=>{
             let data=await Axios.get('/quick_access')
-            let data2=await Axios.get('/recent')
+            let data2=await Axios.get('custom/recent/4')
             let data3=await Axios.get('/file_manager')
             // let data3=await Axios.get('https://docs.google.com/feeds/vt?gd=true&id=1k6nhXEBlp8P3DVeop4DBQAGS-RTzQmdv5VtevzKUrqA&v=1&s=AMedNnoAAAAAZMlsmvCJBAvbSWekl-ey0F_mltyIteuE&sz=s220')
             setQuick(data.data.data)
