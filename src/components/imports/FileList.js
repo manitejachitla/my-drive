@@ -5,14 +5,16 @@ import {useLocation, useParams} from "react-router-dom";
 
 const FileList = ({files,title,type,page}) => {
     const [renderFiles,setRenderFiles]=useState(files)
-    const {id}=useParams()
+    const {id,search_key}=useParams()
     const location=useLocation()
-    console.log(id,location)
-    useEffect(() => {
+    const getApiData=()=>{
         if ((!files || !Array.isArray(files)) && page){
             let url=`custom/${page}/100`
             if (id && location.pathname.includes('folder')){
                 url=`custom/${page}/${id}`
+            }
+            if (search_key && location.pathname.includes('search')){
+                url=`custom/${page}/${search_key}`
             }
             Axios.get(url).then(res=>{
                 setRenderFiles(res.data.data)
@@ -20,7 +22,10 @@ const FileList = ({files,title,type,page}) => {
         }else {
             setRenderFiles(files)
         }
-    }, [files,id]);
+    }
+    useEffect(() => {
+        getApiData()
+    }, [files,id,search_key]);
   return(
       <div className="md_file_list_cont">
           {

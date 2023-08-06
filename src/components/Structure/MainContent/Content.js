@@ -17,6 +17,7 @@ const Content = () => {
               <Route path={'/starred'} element={<FileList page={'starred'} key={'starred'} title={'Starred'}/>}/>
               <Route path={'/all_files'} element={<FileList page={'all_files'} key={'all_files'} title={'All Files'}/>}/>
               <Route path={'/folder/:id'} element={<FileList page={'folder'} key={'folder'} title={'Folder'}/>}/>
+              <Route path={'/search/:search_key'} element={<FileList page={'search'} key={'search'} title={'Search Results'}/>}/>
           </Routes>
       </div>
   )

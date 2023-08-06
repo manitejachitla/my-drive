@@ -11,6 +11,9 @@ const FileItem = ({item,type}) => {
     const handleItemClick=()=>{
         if (isFolder){
             navigate('/folder/'+item.id)
+        } else {
+            let url='https://drive.google.com/file/d/'+item.id
+            window.open(url,'_blank')
         }
     }
   return(

@@ -10,7 +10,8 @@ import signedFile from '../../../img/sidebar/Signed-File.svg'
 import camera from '../../../img/sidebar/Camera.svg'
 import videoCamera from '../../../img/sidebar/Video-camera.svg'
 import {useLocation, useNavigate} from "react-router-dom";
-const SideBar = () => {
+import {getSize} from "../../imports/logic";
+const SideBar = ({storage}) => {
     const navigate=useNavigate()
     const location=useLocation()
     const sidebarItems=[
@@ -30,6 +31,7 @@ const SideBar = () => {
     const onSideBarClick = (item) => {
       navigate(item.path)
     }
+    let usage=(storage.usage/storage.limit)*100
     return (
         <div className="md_sidebar_cont">
             <div className="md_sb_icon_cont">
@@ -61,10 +63,10 @@ const SideBar = () => {
             </div>
             <div className="md_sb_space_cont">
                 <div className="usage_cont">
-                    <p>20.35 GB Used</p>
-                    <p>69% used - 6.64 GB free</p>
+                    <p>{getSize(storage.usage,'GB')} Used</p>
+                    <p>{usage.toFixed(2)}% used - {getSize(storage.usageInDrive,'GB')} free</p>
                     <div className="usage_bar">
-                        <div className={'background'} style={{width:'69%'}}/>
+                        <div className={'background'} style={{width:`${parseInt(usage)}%`}}/>
                     </div>
                 </div>
                 <button>Add More Space</button>
