@@ -9,7 +9,9 @@ const Structure = () => {
     useEffect(() => {
         Axios.get('/get_drive').then(res=>{
             // console.log(res.data)
-            setDrive(res.data.list)
+            if (res?.data?.list){
+                setDrive(res.data.list)
+            }
         })
     }, []);
   return (
