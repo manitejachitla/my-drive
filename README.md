@@ -1,70 +1,71 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Re-Designed File Manager
+### [Deployed Version (https://jio-saavn-clone-6040ff.netlify.app/)](https://jio-saavn-clone-6040ff.netlify.app/)
 
-In the project directory, you can run:
+- The Re-Designed File Manager is a user-friendly UI making  navigating through files and folders becomes a hassle-free task.
+- One of the standout features of this project is its direct synchronization with Google Drive, enabling users to seamlessly access and manage files stored in their Google Drive account without switching between multiple platforms.
+- Furthermore, the re-designed file manager offers enhanced functionalities such as advanced search capabilities, customizable organization options, file previewing, and selective syncing, providing users with greater control and flexibility over their data management.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Intuitive Interface:** The application boasts a clean and user-friendly interface designed to make navigation and manage files a breeze.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+![My Drive](https://github.com/manitejachitla/my-drive/blob/master/demo/demo.png?raw=true)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+- **Favorite Management:** Browse Your Favorite Files at one place.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![My Drive](https://github.com/manitejachitla/my-drive/blob/master/demo/demo1.png?raw=true)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Search and Browse:** Search for files or folders effortlessly.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![My Drive](https://github.com/manitejachitla/my-drive/blob/master/demo/demo2.png?raw=true)
 
-## Learn More
+- **Organized Discovery:** Structured File Management , files are organized by their category (Images,Videos ,Documents etc..) makes browsing files effortlessly.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Technologies Used
 
-### Analyzing the Bundle Size
+- React.js: Frontend user interface
+- Context API: State management
+- HTML and LESS: Styling and layout
+- [API](https://github.com/manitejachitla/google-drive-api) : node-js google drive api using google's v3 API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Installation
 
-### Advanced Configuration
+1. Clone the repository to your local machine:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```
+   git clone https://github.com/manitejachitla/my-drive.git
+   ```
 
-### Deployment
+2. Navigate to the project directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   ```
+   cd my-drive.git
+   ```
 
-### `npm run build` fails to minify
+3. Install the required dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```
+   npm install
+   ```
+
+4. Start the application:
+
+   ```
+   npm start
+   ```
+
+5. Open your web browser and navigate to `http://localhost:3000` to access the application.
